@@ -1,0 +1,61 @@
+name: Bug report
+description: Report a problem with Villagefolk.
+title: "[Bug]: "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: >-
+        Please search existing issues first. Do not attach a full world save; include only the relevant log excerpt or a screenshot.
+  - type: input
+    id: versions
+    attributes:
+      label: Sunrise build and Villagefolk version
+      description: Include the game build and the mod version shown by Sunrise.
+      placeholder: "Sunrise 26.3 (build …), Villagefolk 1.0.3"
+    validations:
+      required: true
+  - type: dropdown
+    id: environment
+    attributes:
+      label: Where does it happen?
+      options:
+        - Single-player
+        - Dedicated server
+        - Both
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Give the smallest sequence that reproduces the issue.
+      placeholder: 1. Start a world…
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+    validations:
+      required: true
+  - type: textarea
+    id: config
+    attributes:
+      label: Relevant configuration or logs
+      description: Remove personal information and include only the relevant excerpt.
+      render: text
+    validations:
+      required: false
+  - type: textarea
+    id: extra
+    attributes:
+      label: Screenshots or other context
+    validations:
+      required: false
