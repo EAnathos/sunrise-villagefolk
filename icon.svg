@@ -1,28 +1,33 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 32 32" shape-rendering="crispEdges">
-  <rect width="32" height="32" fill="#303c37"/>
+  <!-- Green field -->
+  <rect width="32" height="32" fill="#345446"/>
 
-  <!-- Horizontal Minecraft-style name tag above the villager -->
-  <path fill="#40352a" d="M6 3h20v1h2v2h-2v1H6V6H5V4h1z"/>
-  <path fill="#cfb26f" d="M6 4h19v1h2v1h-2v1H6z"/>
-  <path fill="#e2c681" d="M7 4h17v1h2v1h-2v1H7z"/>
-  <path fill="#755b36" d="M10 5h8v1h-8z M20 5h3v1h-3z"/>
-  <!-- Metal ring at the tag's right end -->
-  <path fill="#52605a" d="M26 3h2v1h2v3h-2v1h-2V7h2V5h-2z"/>
-  <path fill="#c7d7d4" d="M27 4h1v1h1v1h-1v1h-1V6h1V5h-1z"/>
+  <!-- Square pixel-art villager face, following the supplied reference -->
+  <path fill="#c98e73" d="M8 3h16v1h1v15h-1v2H8v-2H7V4h1z"/>
+  <!-- dark brow -->
+  <path fill="#352719" d="M9 11h14v2H9z"/>
+  <!-- white eyes and green pixels -->
+  <path fill="#f2eee2" d="M8 13h2v2H8zm14 0h2v2h-2z"/>
+  <path fill="#27a541" d="M10 13h3v2h-3zm9 0h3v2h-3z"/>
+  <path fill="#175b32" d="M12 13h1v2h-1zm7 0h1v2h-1z"/>
+  <!-- broad, long villager nose -->
+  <path fill="#aa7057" d="M14 13h4v2h1v4h-6v-4h1z"/>
+  <path fill="#b77a5e" d="M14 15h3v3h-3z"/>
+  <!-- lower face and neck -->
+  <path fill="#a96f58" d="M10 18h12v2h-2v2h-8v-2h-2z"/>
+  <path fill="#c98e73" d="M13 20h6v3h-6z"/>
 
-  <!-- Square villager head -->
-  <path fill="#4b3022" d="M8 10h2V9h12v1h2v13h-2v2H10v-2H8z"/>
-  <path fill="#d2a184" d="M10 10h12v2h2v10h-2v2H10v-2H8V12h2z"/>
-  <!-- Heavy brows, pale eyes, dark pupils -->
-  <path fill="#38271e" d="M9 12h6v1H9zm9 0h6v1h-6z"/>
-  <path fill="#f0e8d4" d="M10 13h4v2h-4zm8 0h4v2h-4z"/>
-  <path fill="#35433a" d="M12 13h1v2h-1zm8 0h1v2h-1z"/>
-  <!-- Long, square nose -->
-  <path fill="#a96f50" d="M15 14h3v1h1v5h-4z"/>
-  <path fill="#b87b5a" d="M15 15h1v4h-1z"/>
+  <!-- Bust fills the bottom edge -->
+  <path fill="#604333" d="M8 22h5v2h6v-2h5l3 3v7H5v-7z"/>
+  <path fill="#79533d" d="M13 22h6v3h-6z"/>
+  <path fill="#4b352a" d="M14 23h4v3h-4z"/>
 
-  <!-- Compact brown robe -->
-  <path fill="#72523c" d="M10 25h12v1h3v5H7v-5h3z"/>
-  <path fill="#8b684b" d="M13 26h6v2h-6z"/>
-  <path fill="#4b3022" d="M15 28h2v3h-2z"/>
+  <!-- Wide Minecraft-style name tag over the chest -->
+  <path fill="#3c3026" d="M3 24h26v1h1v5h-1v1H3v-1H2v-5h1z"/>
+  <path fill="#d1b16c" d="M3 25h26v5H3z"/>
+  <path fill="#efdfb1" d="M4 25h24v4H4z"/>
+  <path fill="#78623d" d="M7 26h10v1H7zm13 0h8v1h-8z M7 28h14v1H7z"/>
+  <!-- name-tag ring -->
+  <path fill="#9fb6b5" d="M26 22h2v1h2v2h-2v-1h-2z"/>
+  <path fill="#d7e2dc" d="M27 22h1v1h1v1h-1v-1h-1z"/>
 </svg>
