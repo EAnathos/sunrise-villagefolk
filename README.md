@@ -45,6 +45,20 @@ server config, so merge new bundled names into your file if you want to add them
 
 Find and install **Villagefolk** from the [Sunrise Mods registry](https://playsunrise.net/mods/villagefolk).
 
+## Scope and in-game check
+
+Villagefolk names ordinary villagers (`minecraft:villager`), including summoned villagers and villagers loaded from
+village chunks. It does not name wandering traders or zombie villagers, and adds no entities, items, or AI. Names are
+chosen independently, so two villagers can have the same name.
+
+To check the main behavior in game:
+
+1. Start a world with Villagefolk enabled and find a village.
+2. Confirm its villagers display names above them.
+3. Leave and reopen the world; existing villagers should keep their names.
+4. Rename a villager with a name tag, leave and reopen the world, and confirm the rename remains.
+5. Spawn a new villager and confirm it receives a name.
+
 ## Build and run
 
 Install Sunrise's `cargo sunrise-mod` tool and Rust. The project is pinned to Sunrise build
@@ -62,8 +76,7 @@ The mod does not depend on Sunrise Creatures or other mods.
 ## Development
 
 The project follows the native mod layout and release flow used by
-[EAnathos/sunrise-creatures](https://github.com/EAnathos/sunrise-creatures). See [SPECS.md](SPECS.md) for the current
-scope and limitations.
+[EAnathos/sunrise-creatures](https://github.com/EAnathos/sunrise-creatures).
 
 ## License
 
