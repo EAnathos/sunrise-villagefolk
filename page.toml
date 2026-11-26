@@ -25,7 +25,7 @@ The `all` list is shared by every village style. Each style list adds names used
 }
 ```
 
-Add or remove names in any list. Keep the file valid JSON, with names in double quotes and commas between entries. An empty style list uses names from `all` only. The bundled defaults include shared names and style-themed lists.
+Add or remove names in any list. Keep the file valid JSON, with names in double quotes and commas between entries. An empty style list uses names from `all` only. The bundled config has **170 default name entries**: 20 shared names, plus 30 plains, 28 desert, 28 savanna, 29 taiga and 35 snowy names.
 
 ## When names are assigned
 

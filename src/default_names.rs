@@ -4,24 +4,29 @@ pub const DEFAULT_NAMES: &str = r#"{
     "Hollis", "Kit", "Lane", "Lou", "Marlow", "Morgan", "Nico", "Quinn", "Remy", "Robin"
   ],
   "plains": [
-    "Abigail", "Bennett", "Clara", "Cora", "Dale", "Edith", "Edwin", "Florence", "Gideon", "Henry",
-    "Isaac", "Jasper", "Mabel", "Millie", "Nell", "Otis", "Theodore", "Willa"
+    "Abigail", "Ada", "Arthur", "Bennett", "Clara", "Cora", "Dale", "Edith", "Edwin", "Elsie",
+    "Emmett", "Florence", "Gideon", "Hattie", "Henry", "Isaac", "Jasper", "Lottie", "Mabel", "Marigold",
+    "Millie", "Nell", "Orson", "Otis", "Primrose", "Theodore", "Thomas", "Walter", "Willa", "Winifred"
   ],
   "desert": [
-    "Amira", "Basil", "Dahlia", "Dorian", "Estelle", "Farah", "Idris", "Jamal", "Layla", "Mina", "Nadia",
-    "Omar", "Sahara", "Samir", "Yara", "Zahra"
+    "Aisha", "Amir", "Amira", "Basil", "Dahlia", "Dorian", "Estelle", "Farah", "Farida", "Hadi", "Idris",
+    "Jamal", "Layla", "Leila", "Malika", "Mina", "Nabil", "Nadia", "Omar", "Rami", "Safiya", "Sahara",
+    "Samir", "Tariq", "Yara", "Yasmin", "Zahra", "Zayn"
   ],
   "savanna": [
-    "Ayo", "Bea", "Callum", "Chidi", "Clement", "Flynn", "Greta", "Imani", "Kendi", "Kofi", "Kwame",
-    "Makena", "Nia", "Thabo", "Tobin", "Zuri"
+    "Amina", "Ayo", "Baraka", "Bea", "Callum", "Chidi", "Clement", "Deka", "Flynn", "Greta", "Imani",
+    "Jabari", "Kamau", "Kendi", "Kofi", "Kwame", "Lela", "Makena", "Mosi", "Nia", "Nuru", "Omari",
+    "Sefu", "Tendo", "Thabo", "Tobin", "Zola", "Zuri"
   ],
   "taiga": [
-    "Ansel", "Bram", "Cedar", "Elowen", "Fern", "Gale", "Harlan", "Juniper", "Laurel", "Linden", "Mikkel",
-    "Oakley", "Perrin", "Rowan", "Sage", "Soren", "Ylva"
+    "Anders", "Ansel", "Bjorn", "Bram", "Cedar", "Dagny", "Einar", "Elowen", "Fern", "Gale", "Halvard",
+    "Harlan", "Inga", "Juniper", "Kari", "Knut", "Laurel", "Linden", "Liv", "Mikkel", "Oakley", "Oskar",
+    "Perrin", "Rowan", "Runa", "Sage", "Soren", "Tove", "Ylva"
   ],
   "snowy": [
-    "Astrid", "Bell", "Blair", "Briar", "Daphne", "Eira", "Flora", "Freya", "Hazel", "Ingrid", "Iris",
-    "June", "Leif", "Lucille", "Nils", "Olive", "Orla", "Poppy", "Sasha", "Silas", "Sylvie", "Valerie",
-    "Wren"
+    "Agneta", "Alva", "Astrid", "Bell", "Blair", "Briar", "Daphne", "Eira", "Elsa", "Flora", "Freya",
+    "Hazel", "Hilde", "Ingrid", "Iris", "June", "Kjell", "Leif", "Lucille", "Maren", "Nils", "Olive",
+    "Orla", "Poppy", "Sasha", "Sigrid", "Silas", "Solveig", "Stellan", "Stig", "Sylvie", "Tor", "Valerie",
+    "Wren", "Yrsa"
   ]
 }"#;
