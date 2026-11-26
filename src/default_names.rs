@@ -4,21 +4,24 @@ pub const DEFAULT_NAMES: &str = r#"{
     "Hollis", "Kit", "Lane", "Lou", "Marlow", "Morgan", "Nico", "Quinn", "Remy", "Robin"
   ],
   "plains": [
-    "Bennett", "Cora", "Dale", "Edith", "Gideon", "Isaac", "Jasper", "Mabel", "Nell", "Otis",
-    "Theodore", "Willa"
+    "Abigail", "Bennett", "Clara", "Cora", "Dale", "Edith", "Edwin", "Florence", "Gideon", "Henry",
+    "Isaac", "Jasper", "Mabel", "Millie", "Nell", "Otis", "Theodore", "Willa"
   ],
   "desert": [
-    "Basil", "Dahlia", "Dorian", "Estelle", "Jamal", "Layla", "Mina", "Omar", "Sahara", "Yara"
+    "Amira", "Basil", "Dahlia", "Dorian", "Estelle", "Farah", "Idris", "Jamal", "Layla", "Mina", "Nadia",
+    "Omar", "Sahara", "Samir", "Yara", "Zahra"
   ],
   "savanna": [
-    "Bea", "Callum", "Clement", "Flynn", "Greta", "Kofi", "Kwame", "Nia", "Tobin", "Zuri"
+    "Ayo", "Bea", "Callum", "Chidi", "Clement", "Flynn", "Greta", "Imani", "Kendi", "Kofi", "Kwame",
+    "Makena", "Nia", "Thabo", "Tobin", "Zuri"
   ],
   "taiga": [
-    "Bram", "Cedar", "Fern", "Gale", "Juniper", "Laurel", "Linden", "Oakley", "Perrin", "Rowan",
-    "Sage"
+    "Ansel", "Bram", "Cedar", "Elowen", "Fern", "Gale", "Harlan", "Juniper", "Laurel", "Linden", "Mikkel",
+    "Oakley", "Perrin", "Rowan", "Sage", "Soren", "Ylva"
   ],
   "snowy": [
-    "Bell", "Blair", "Briar", "Daphne", "Flora", "Hazel", "Iris", "June", "Lucille", "Olive",
-    "Orla", "Poppy", "Sasha", "Silas", "Sylvie", "Valerie", "Wren"
+    "Astrid", "Bell", "Blair", "Briar", "Daphne", "Eira", "Flora", "Freya", "Hazel", "Ingrid", "Iris",
+    "June", "Leif", "Lucille", "Nils", "Olive", "Orla", "Poppy", "Sasha", "Silas", "Sylvie", "Valerie",
+    "Wren"
   ]
 }"#;
