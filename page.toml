@@ -1,5 +1,5 @@
 summary = "Give every villager a name to remember."
-description = "Villagefolk gives villagers a name from a server-configurable list for their village style: plains, desert, savanna, taiga or snowy. Shared names can be used everywhere, and villagers keep their assigned names across saves and reloads."
+description = "Give Sunrise villagers names that suit their village: plains, desert, savanna, taiga or snowy. Villagefolk combines style-specific name lists with a shared list, all editable in the server's villagefolk-server.json config (globally or per world). Changes reload while the server runs; assigned names and name-tag renames persist across saves and restarts. Server-side only: multiplayer clients do not need the mod."
 categories = ["social", "utility"]
 
 [[screenshots]]
