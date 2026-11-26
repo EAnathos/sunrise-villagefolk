@@ -1,16 +1,30 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 32 32" shape-rendering="crispEdges">
-  <rect width="32" height="32" fill="#26372f"/>
-  <!-- Blocky villager head and hair -->
-  <path fill="#72523c" d="M9 5h14v2h1v6h-2v-2H10v2H8V7h1z"/>
-  <path fill="#a8835d" d="M10 9h12v2H10z"/>
-  <path fill="#eadcbb" d="M10 11h12v7H10z M11 18h10v1H11z"/>
-  <path fill="#26372f" d="M11 12h2v2h-2z M19 12h2v2h-2z"/>
-  <path fill="#c49a72" d="M15 13h2v4h-2z"/>
-  <!-- Beige shoulders -->
-  <path fill="#b8a985" d="M8 19h16v1h2v7H6v-7h2z"/>
-  <path fill="#d9cda9" d="M13 19h6v2h-6z"/>
-  <!-- Tiny name card is the distinctive mark -->
-  <path fill="#f0e5ca" d="M19 20h9v6h-9z"/>
-  <path fill="#53685a" d="M20 21h6v1h-6z M20 23h5v1h-5z"/>
-  <path fill="#c6944f" d="M27 19h2v2h-2z"/>
+  <rect width="32" height="32" fill="#303c37"/>
+
+  <!-- Pixel-art villager -->
+  <path fill="#4b3022" d="M10 3h12v2h2v3h2v10h-2v3H8v-3H6V8h2V5h2z"/>
+  <path fill="#b78668" d="M10 5h12v2h2v10h-2v3H10v-3H8V8h2z"/>
+  <path fill="#d2a184" d="M10 7h12v2h2v8h-2v3H10v-3H8V9h2z"/>
+  <!-- heavy brows and eyes -->
+  <path fill="#38271e" d="M9 9h6v2H9zm9 0h6v2h-6z"/>
+  <path fill="#f0e8d4" d="M10 11h4v2h-4zm8 0h4v2h-4z"/>
+  <path fill="#35433a" d="M12 11h2v2h-2zm8 0h2v2h-2z"/>
+  <!-- long villager nose -->
+  <path fill="#a96f50" d="M15 11h3v2h2v5h-5z"/>
+  <path fill="#b87b5a" d="M15 13h3v4h-3z"/>
+  <!-- robe and shoulders -->
+  <path fill="#72523c" d="M8 20h16v2h3v8H5v-8h3z"/>
+  <path fill="#8b684b" d="M11 21h10v2H11z"/>
+  <path fill="#4b3022" d="M14 23h4v7h-4z"/>
+
+  <!-- Minecraft-style name tag, tilted across the robe -->
+  <path fill="#40352a" d="M23 13h3v1h2v2h1v3h-2v2h-2v2h-2v2h-3v2h-3v-3h2v-2h2v-2h2v-2h2v-3h-2z"/>
+  <path fill="#cfb26f" d="M22 15h3v-1h2v2h1v3h-2v2h-2v2h-2v2h-3v2h-2v-2h2v-2h2v-2h2v-2h2v-3h-3z"/>
+  <path fill="#e2c681" d="M21 17h3v-2h2v3h-2v2h-2v2h-2v2h-2v-2h2v-2h2v-2h2v-1h-3z"/>
+  <!-- metal loop -->
+  <path fill="#9cb6b6" d="M25 10h3v1h2v4h-2v2h-2v-2h2v-3h-2v2h-2v-3h1z"/>
+  <path fill="#d5e0da" d="M26 11h2v1h1v2h-1v1h-1v-2h1v-1h-2z"/>
+  <!-- tag hole and tiny inscription -->
+  <path fill="#514431" d="M24 16h1v1h-1z"/>
+  <path fill="#755b36" d="M21 20h3v1h-3z M19 22h3v1h-3z"/>
 </svg>
