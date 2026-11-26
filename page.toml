@@ -2,7 +2,6 @@ summary = "Give every villager a name to remember."
 description = "Villagefolk gives villagers a name from a server-configurable list for their village style: plains, desert, savanna, taiga or snowy. Shared names can be used everywhere, and villagers keep their assigned names across saves and reloads."
 categories = ["social", "utility"]
 
-# Before release, add at least one in-game screenshot here and save it under page/.
-# [[screenshots]]
-# path = "page/villagefolk.png"
-# caption = "Villagers display their names above them."
+[[screenshots]]
+path = "page/village-desert.png"
+caption = "Villagers display their names above them in a desert village."
