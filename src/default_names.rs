@@ -1,79 +1,24 @@
-pub const DEFAULT_NAMES: &str = r#"
-# One name per line. Blank lines and lines starting with # are ignored.
-Avery
-Alex
-Ash
-Bailey
-Basil
-Bea
-Bell
-Bennett
-Blair
-Bram
-Briar
-Callum
-Cedar
-Charlie
-Clement
-Clover
-Cora
-Dahlia
-Dale
-Daphne
-Dorian
-Eden
-Edith
-Elias
-Ellis
-Emery
-Estelle
-Fern
-Finley
-Flora
-Flynn
-Gale
-Gideon
-Greta
-Harper
-Hazel
-Hollis
-Iris
-Isaac
-Jasper
-June
-Juniper
-Kit
-Lane
-Laurel
-Linden
-Lou
-Lucille
-Mabel
-Marlow
-Mina
-Morgan
-Nell
-Nico
-Noel
-Oakley
-Olive
-Orla
-Otis
-Parker
-Perrin
-Poppy
-Quinn
-Remy
-Robin
-Rowan
-Sage
-Sasha
-Silas
-Sylvie
-Theodore
-Tobin
-Valerie
-Willa
-Wren
-Yara
-"#;
+pub const DEFAULT_NAMES: &str = r#"{
+  "all": [
+    "Avery", "Alex", "Ash", "Bailey", "Charlie", "Eden", "Ellis", "Emery", "Finley", "Harper",
+    "Hollis", "Kit", "Lane", "Lou", "Marlow", "Morgan", "Nico", "Quinn", "Remy", "Robin"
+  ],
+  "plains": [
+    "Bennett", "Cora", "Dale", "Edith", "Gideon", "Isaac", "Jasper", "Mabel", "Nell", "Otis",
+    "Theodore", "Willa"
+  ],
+  "desert": [
+    "Basil", "Dahlia", "Dorian", "Estelle", "Jamal", "Layla", "Mina", "Omar", "Sahara", "Yara"
+  ],
+  "savanna": [
+    "Bea", "Callum", "Clement", "Flynn", "Greta", "Kofi", "Kwame", "Nia", "Tobin", "Zuri"
+  ],
+  "taiga": [
+    "Bram", "Cedar", "Fern", "Gale", "Juniper", "Laurel", "Linden", "Oakley", "Perrin", "Rowan",
+    "Sage"
+  ],
+  "snowy": [
+    "Bell", "Blair", "Briar", "Daphne", "Flora", "Hazel", "Iris", "June", "Lucille", "Olive",
+    "Orla", "Poppy", "Sasha", "Silas", "Sylvie", "Valerie", "Wren"
+  ]
+}"#;

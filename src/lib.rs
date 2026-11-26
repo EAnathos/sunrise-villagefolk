@@ -8,16 +8,16 @@ use std::collections::HashSet;
 use std::sync::{Mutex, OnceLock, RwLock};
 
 const MOD_ID: &str = "villagefolk";
-const CONFIG_FILE: &str = "villagefolk-server.txt";
+const CONFIG_FILE: &str = "villagefolk-server.json";
 const VILLAGER: &str = "minecraft:villager";
 mod default_names;
 use default_names::DEFAULT_NAMES;
 
-static NAMES: OnceLock<RwLock<Vec<String>>> = OnceLock::new();
+static NAMES: OnceLock<RwLock<NameLists>> = OnceLock::new();
 static NAMED_UUIDS: OnceLock<Mutex<HashSet<u128>>> = OnceLock::new();
 
-fn names() -> &'static RwLock<Vec<String>> {
-    NAMES.get_or_init(|| RwLock::new(parse_names(DEFAULT_NAMES)))
+fn names() -> &'static RwLock<NameLists> {
+    NAMES.get_or_init(|| RwLock::new(parse_names(DEFAULT_NAMES).unwrap_or_default()))
 }
 
 #[derive(Default)]
@@ -76,13 +76,20 @@ impl Hooks for Villagefolk {
             named_uuids.insert(uuid);
             return Flow::Continue;
         }
+        let style = host
+            .merchant(entity)
+            .and_then(|merchant| merchant.villager_type(host))
+            .as_deref()
+            .and_then(village_style);
         let Ok(names) = names().read() else {
             return Flow::Continue;
         };
-        if names.is_empty() {
+        let Some(pool_size) = names.pool_size(style) else {
             return Flow::Continue;
-        }
-        let name = &names[name_index(uuid, names.len())];
+        };
+        let name = names
+            .name_at(style, name_index(uuid, pool_size))
+            .expect("pool_size counts the available names");
         let _ = entity.set_custom_name(host, Some(Text::literal(name.clone())));
         let _ = entity.set_custom_name_visible(host, true);
         named_uuids.insert(uuid);
@@ -97,21 +104,91 @@ fn load_config(config: &ConfigFile) {
     if config.mod_id != MOD_ID || config.kind != ConfigKind::Server || config.file != CONFIG_FILE {
         return;
     }
-    let parsed = parse_names(&config.text);
-    if !parsed.is_empty() {
+    if let Some(parsed) = parse_names(&config.text) {
         if let Ok(mut current) = names().write() {
             *current = parsed;
         }
     }
 }
 
-/// Each non-empty line is one name; blank lines and lines starting with `#` are ignored.
-fn parse_names(text: &str) -> Vec<String> {
-    text.lines()
-        .map(str::trim)
-        .filter(|line| !line.is_empty() && !line.starts_with('#'))
-        .map(str::to_owned)
-        .collect()
+#[derive(Default)]
+struct NameLists {
+    all: Vec<String>,
+    plains: Vec<String>,
+    desert: Vec<String>,
+    savanna: Vec<String>,
+    taiga: Vec<String>,
+    snowy: Vec<String>,
+}
+
+impl NameLists {
+    fn for_style(&self, style: Option<&str>) -> &[String] {
+        match style {
+            Some("plains") => &self.plains,
+            Some("desert") => &self.desert,
+            Some("savanna") => &self.savanna,
+            Some("taiga") => &self.taiga,
+            Some("snowy") => &self.snowy,
+            _ => &[],
+        }
+    }
+
+    fn pool_size(&self, style: Option<&str>) -> Option<usize> {
+        let count = self.all.len() + self.for_style(style).len();
+        (count > 0).then_some(count)
+    }
+
+    fn name_at(&self, style: Option<&str>, index: usize) -> Option<&String> {
+        if index < self.all.len() {
+            self.all.get(index)
+        } else {
+            self.for_style(style).get(index - self.all.len())
+        }
+    }
+}
+
+/// Parse `all` and the five vanilla village styles from the server's JSON config.
+fn parse_names(text: &str) -> Option<NameLists> {
+    let value: serde_json::Value = serde_json::from_str(text).ok()?;
+    let list = |key: &str| {
+        value
+            .get(key)
+            .and_then(serde_json::Value::as_array)
+            .into_iter()
+            .flatten()
+            .filter_map(serde_json::Value::as_str)
+            .map(str::trim)
+            .filter(|name| !name.is_empty())
+            .map(str::to_owned)
+            .collect::<Vec<_>>()
+    };
+    let names = NameLists {
+        all: list("all"),
+        plains: list("plains"),
+        desert: list("desert"),
+        savanna: list("savanna"),
+        taiga: list("taiga"),
+        snowy: list("snowy"),
+    };
+    names
+        .pool_size(Some("plains"))
+        .or_else(|| names.pool_size(Some("desert")))
+        .or_else(|| names.pool_size(Some("savanna")))
+        .or_else(|| names.pool_size(Some("taiga")))
+        .or_else(|| names.pool_size(Some("snowy")))
+        .map(|_| names)
+}
+
+/// Convert Sunrise's villager variant registry id into one of the five village styles.
+fn village_style(villager_type: &str) -> Option<&'static str> {
+    match villager_type.rsplit(':').next().unwrap_or(villager_type) {
+        "plains" => Some("plains"),
+        "desert" => Some("desert"),
+        "savanna" => Some("savanna"),
+        "taiga" => Some("taiga"),
+        "snow" | "snowy" => Some("snowy"),
+        _ => None,
+    }
 }
 
 /// Mix both halves of a UUID before selecting a name, so related UUID values are well spread.

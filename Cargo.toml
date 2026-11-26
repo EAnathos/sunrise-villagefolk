@@ -7,3 +7,4 @@ edition = "2024"
 # The pinned SDK's API crate, fetched into .sunrise/sdk/ by any `cargo sunrise-mod` command. Any other
 # registry dependency is pinned in Cargo.lock by `cargo sunrise-mod build`.
 sunrise-mod-api = { path = ".sunrise/sdk/api/crates/sunrise-mod-api" }
+serde_json = "1.0.151"

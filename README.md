@@ -8,16 +8,31 @@ stays the same when the world is saved and loaded again. A name tag used by the 
 
 ## Configure names
 
-Villagefolk registers a server configuration named `villagefolk-server.txt`. Sunrise creates it from
-[`src/default_names.rs`](src/default_names.rs) the first time the mod starts. On a dedicated server,
-edit `config/villagefolk-server.txt`; for a particular world, edit or create
-`saves/<world>/serverconfig/villagefolk-server.txt`. The world-specific file takes precedence. In single-player,
+Villagefolk registers a server configuration named `villagefolk-server.json`. Sunrise creates it from
+[`src/default_names.rs`](src/default_names.rs) the first time the mod starts. On a dedicated server, edit
+`config/villagefolk-server.json`; for a particular world, edit or create
+`saves/<world>/serverconfig/villagefolk-server.json`. The world-specific file takes precedence. In single-player,
 the integrated server uses these same server settings.
 
-Put one name on each line. Blank lines and lines beginning with `#` are ignored. Changes are picked up while the
-server is running. An empty list falls back to the previously loaded list. Existing villagers are named the first time
-Villagefolk sees them, including villagers loaded from village chunks. The world stores which UUIDs Villagefolk has
-handled, so chunk reloads and server restarts do not reset a later name-tag rename.
+The JSON object has an `all` list plus lists for the five village styles: `plains`, `desert`, `savanna`, `taiga`, and
+`snowy`. Names in `all` can be chosen in any style; names in a style list are added to that style's pool. For example:
+
+```json
+{
+  "all": ["Alex", "Robin"],
+  "plains": ["Mabel", "Otis"],
+  "desert": ["Sahara", "Omar"],
+  "savanna": ["Zuri"],
+  "taiga": ["Cedar"],
+  "snowy": ["Wren"]
+}
+```
+
+The village style comes from the villager's type. A village-style list is combined with `all`; if the style list is
+empty, that villager uses `all` only. JSON changes are picked up while the server is running. The mod names villagers
+the first time it sees them, including villagers loaded from village chunks. The world stores which UUIDs Villagefolk
+has handled, so chunk reloads and server restarts do not reset a later name-tag rename. Villagers already named before
+this configuration change keep their current names.
 
 Villagefolk is server-side only. In multiplayer, install it on the server; players see the names through normal entity
 updates and do not need the mod installed on their clients. In single-player, the local integrated server runs it.
