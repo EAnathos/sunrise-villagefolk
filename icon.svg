@@ -1,30 +1,28 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 32 32" shape-rendering="crispEdges">
   <rect width="32" height="32" fill="#303c37"/>
 
-  <!-- Pixel-art villager -->
-  <path fill="#4b3022" d="M10 3h12v2h2v3h2v10h-2v3H8v-3H6V8h2V5h2z"/>
-  <path fill="#b78668" d="M10 5h12v2h2v10h-2v3H10v-3H8V8h2z"/>
-  <path fill="#d2a184" d="M10 7h12v2h2v8h-2v3H10v-3H8V9h2z"/>
-  <!-- heavy brows and eyes -->
-  <path fill="#38271e" d="M9 9h6v2H9zm9 0h6v2h-6z"/>
-  <path fill="#f0e8d4" d="M10 11h4v2h-4zm8 0h4v2h-4z"/>
-  <path fill="#35433a" d="M12 11h2v2h-2zm8 0h2v2h-2z"/>
-  <!-- long villager nose -->
-  <path fill="#a96f50" d="M15 11h3v2h2v5h-5z"/>
-  <path fill="#b87b5a" d="M15 13h3v4h-3z"/>
-  <!-- robe and shoulders -->
-  <path fill="#72523c" d="M8 20h16v2h3v8H5v-8h3z"/>
-  <path fill="#8b684b" d="M11 21h10v2H11z"/>
-  <path fill="#4b3022" d="M14 23h4v7h-4z"/>
+  <!-- Horizontal Minecraft-style name tag above the villager -->
+  <path fill="#40352a" d="M6 3h20v1h2v2h-2v1H6V6H5V4h1z"/>
+  <path fill="#cfb26f" d="M6 4h19v1h2v1h-2v1H6z"/>
+  <path fill="#e2c681" d="M7 4h17v1h2v1h-2v1H7z"/>
+  <path fill="#755b36" d="M10 5h8v1h-8z M20 5h3v1h-3z"/>
+  <!-- Metal ring at the tag's right end -->
+  <path fill="#52605a" d="M26 3h2v1h2v3h-2v1h-2V7h2V5h-2z"/>
+  <path fill="#c7d7d4" d="M27 4h1v1h1v1h-1v1h-1V6h1V5h-1z"/>
 
-  <!-- Minecraft-style name tag, tilted across the robe -->
-  <path fill="#40352a" d="M23 13h3v1h2v2h1v3h-2v2h-2v2h-2v2h-3v2h-3v-3h2v-2h2v-2h2v-2h2v-3h-2z"/>
-  <path fill="#cfb26f" d="M22 15h3v-1h2v2h1v3h-2v2h-2v2h-2v2h-3v2h-2v-2h2v-2h2v-2h2v-2h2v-3h-3z"/>
-  <path fill="#e2c681" d="M21 17h3v-2h2v3h-2v2h-2v2h-2v2h-2v-2h2v-2h2v-2h2v-1h-3z"/>
-  <!-- metal loop -->
-  <path fill="#9cb6b6" d="M25 10h3v1h2v4h-2v2h-2v-2h2v-3h-2v2h-2v-3h1z"/>
-  <path fill="#d5e0da" d="M26 11h2v1h1v2h-1v1h-1v-2h1v-1h-2z"/>
-  <!-- tag hole and tiny inscription -->
-  <path fill="#514431" d="M24 16h1v1h-1z"/>
-  <path fill="#755b36" d="M21 20h3v1h-3z M19 22h3v1h-3z"/>
+  <!-- Square villager head -->
+  <path fill="#4b3022" d="M8 10h2V9h12v1h2v13h-2v2H10v-2H8z"/>
+  <path fill="#d2a184" d="M10 10h12v2h2v10h-2v2H10v-2H8V12h2z"/>
+  <!-- Heavy brows, pale eyes, dark pupils -->
+  <path fill="#38271e" d="M9 12h6v1H9zm9 0h6v1h-6z"/>
+  <path fill="#f0e8d4" d="M10 13h4v2h-4zm8 0h4v2h-4z"/>
+  <path fill="#35433a" d="M12 13h1v2h-1zm8 0h1v2h-1z"/>
+  <!-- Long, square nose -->
+  <path fill="#a96f50" d="M15 14h3v1h1v5h-4z"/>
+  <path fill="#b87b5a" d="M15 15h1v4h-1z"/>
+
+  <!-- Compact brown robe -->
+  <path fill="#72523c" d="M10 25h12v1h3v5H7v-5h3z"/>
+  <path fill="#8b684b" d="M13 26h6v2h-6z"/>
+  <path fill="#4b3022" d="M15 28h2v3h-2z"/>
 </svg>
