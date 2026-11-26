@@ -1,5 +1,38 @@
 summary = "Give every villager a name to remember."
-description = "Give Sunrise villagers names that suit their village: plains, desert, savanna, taiga or snowy. Villagefolk combines style-specific name lists with a shared list, all editable in the server's villagefolk-server.json config (globally or per world). Changes reload while the server runs; assigned names and name-tag renames persist across saves and restarts. Server-side only: multiplayer clients do not need the mod."
+description = """
+## Give every villager a name to remember
+
+Villagefolk gives villagers names that fit their village style: plains, desert, savanna, taiga or snowy. Names stay with villagers across saves and restarts, and players can still rename them with a name tag.
+
+## Configure the name lists
+
+Villagefolk creates `villagefolk-server.json` the first time it starts. Edit the file on the server:
+
+- Dedicated server: `config/villagefolk-server.json`
+- Per-world settings: `saves/<world>/serverconfig/villagefolk-server.json` (takes precedence)
+- Single-player: the integrated server uses the same server settings
+
+The `all` list is shared by every village style. Each style list adds names used only for that style. For example:
+
+```json
+{
+  "all": ["Alex", "Robin"],
+  "plains": ["Mabel", "Otis"],
+  "desert": ["Sahara", "Omar"],
+  "savanna": ["Zuri"],
+  "taiga": ["Cedar"],
+  "snowy": ["Freya", "Wren"]
+}
+```
+
+Add or remove names in any list. Keep the file valid JSON, with names in double quotes and commas between entries. An empty style list uses names from `all` only. The bundled defaults include shared names and style-themed lists.
+
+## When names are assigned
+
+The server reloads configuration changes while running. New names apply to villagers Villagefolk has not named yet; existing assignments and name-tag renames are preserved. A mod update does not overwrite an existing config, so add new defaults to your current file if you want them in an existing world.
+
+Villagefolk runs on the server. In multiplayer, only the server needs the mod; clients see villager names without installing it.
+"""
 categories = ["social", "utility"]
 
 [[screenshots]]
