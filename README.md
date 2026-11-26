@@ -2,30 +2,33 @@
 
 Give the villagers of Sunrise a name to remember.
 
-**Villagefolk** is a native Rust mod for [Sunrise](https://playsunrise.net) that gives villagers in villages a randomly
-chosen name. The goal is to make village life feel more personal without adding new entities or changing how villagers
-behave.
-
-> Early project setup. The naming behaviour and Sunrise compatibility are not implemented yet.
-
-## Planned
-
-- Give naturally spawned villagers in villages a randomly selected name.
-- Keep each villager's name stable across saves and reloads.
-- Avoid assigning a new name each time a villager is seen or loaded.
-- Keep the feature lightweight and compatible with ordinary villager behaviour.
-
-See [SPECS.md](SPECS.md) for the initial design and open implementation questions.
+**Villagefolk** is a small native Rust mod for [Sunrise](https://playsunrise.net). It gives each newly spawned villager
+a randomly selected name and shows that name above them. The name is derived from the villager's UUID, so it stays the
+same when the world is saved and loaded again. A name tag used by the player can still rename the villager.
 
 ## Install
 
-There is no playable release yet. Once available, the mod will be listed on [Sunrise Mods](https://playsunrise.net/mods).
+There is no public release yet. Once available, Villagefolk will be listed on [Sunrise Mods](https://playsunrise.net/mods).
+
+## Build and run
+
+Install Sunrise's `cargo sunrise-mod` tool and Rust. The project is pinned to Sunrise build
+`94256510f74e6843754e0a93fd9e4da7e45b1056`; the tool fetches its SDK into the ignored `.sunrise/` folder.
+
+```sh
+cargo sunrise-mod check
+cargo sunrise-mod build
+cargo sunrise-mod run --resources <prepared-resources> -- --world Villagefolk --creative
+cargo test
+```
+
+The mod does not depend on Sunrise Creatures or other mods.
 
 ## Development
 
-Villagefolk is intended to be a standalone native Sunrise mod, written in Rust and inspired by the structure of
-[EAnathos/sunrise-creatures](https://github.com/EAnathos/sunrise-creatures). Build instructions will be added once the
-mod's Sunrise API hooks and package manifest are in place.
+The project follows the native mod layout and release flow used by
+[EAnathos/sunrise-creatures](https://github.com/EAnathos/sunrise-creatures). See [SPECS.md](SPECS.md) for the current
+scope and limitations.
 
 ## License
 

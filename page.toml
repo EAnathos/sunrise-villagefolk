@@ -1,0 +1,3 @@
+summary = "Give every villager a name to remember."
+description = "Villagefolk gives villagers a randomly selected name when they first appear. Names are stable across saves and reloads, and players can still rename villagers with name tags."
+categories = ["social", "utility"]
