@@ -28,7 +28,7 @@ cargo sunrise-mod build
 cargo test
 ```
 
-See [README.md](README.md) for the mod's configuration and usage, and [SPECS.md](SPECS.md) for its current scope and behavior. If a change affects how the mod behaves in game, describe the manual steps needed to verify it in your pull request.
+See [README.md](README.md) for the mod's configuration, usage, scope, and in-game checks. If a change affects how the mod behaves in game, describe the manual steps needed to verify it in your pull request.
 
 ## Branch workflow
 
