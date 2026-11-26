@@ -1,6 +1,6 @@
 id = "villagefolk"
 name = "Villagefolk"
-version = "1.0.3"
+version = "1.0.4"
 description = "Gives villagers individual names that persist with their world."
 authors = ["EAnathos"]
 license = "PolyForm-Noncommercial-1.0.0"
