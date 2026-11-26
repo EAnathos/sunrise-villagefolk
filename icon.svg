@@ -1,14 +1,16 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
-  <rect width="512" height="512" rx="88" fill="#26372f"/>
-  <!-- Simple villager silhouette -->
-  <path d="M105 421c9-74 53-113 151-113s142 39 151 113H105z" fill="#b8a985"/>
-  <path d="M182 214v-69l28-28h92l28 28v69l-24-13H206z" fill="#72523c"/>
-  <path d="M190 183h132v96l-26 29h-80l-26-29z" fill="#e5d8b8"/>
-  <path d="M205 168h102v22H205z" fill="#a8835d"/>
-  <path d="M218 218h14v14h-14zm62 0h14v14h-14z" fill="#26372f"/>
-  <path d="M244 230h24v39h-24z" fill="#c49a72"/>
-  <!-- Name tag -->
-  <path d="M305 322h96v66h-96z" fill="#f0e5ca"/>
-  <path d="M322 343h62M322 365h43" stroke="#53685a" stroke-width="9" stroke-linecap="square"/>
-  <circle cx="399" cy="322" r="17" fill="#c6944f"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 32 32" shape-rendering="crispEdges">
+  <rect width="32" height="32" fill="#26372f"/>
+  <!-- Blocky villager head and hair -->
+  <path fill="#72523c" d="M9 5h14v2h1v6h-2v-2H10v2H8V7h1z"/>
+  <path fill="#a8835d" d="M10 9h12v2H10z"/>
+  <path fill="#eadcbb" d="M10 11h12v7H10z M11 18h10v1H11z"/>
+  <path fill="#26372f" d="M11 12h2v2h-2z M19 12h2v2h-2z"/>
+  <path fill="#c49a72" d="M15 13h2v4h-2z"/>
+  <!-- Beige shoulders -->
+  <path fill="#b8a985" d="M8 19h16v1h2v7H6v-7h2z"/>
+  <path fill="#d9cda9" d="M13 19h6v2h-6z"/>
+  <!-- Tiny name card is the distinctive mark -->
+  <path fill="#f0e5ca" d="M19 20h9v6h-9z"/>
+  <path fill="#53685a" d="M20 21h6v1h-6z M20 23h5v1h-5z"/>
+  <path fill="#c6944f" d="M27 19h2v2h-2z"/>
 </svg>
