@@ -4,19 +4,20 @@ A small native mod for Sunrise that gives villagers individual names and makes v
 
 ## 0. Status
 
-Implemented; compile and in-game verification pending.
+Implemented; compile verification complete. Visual confirmation of the overhead names is left to the player.
 
-- Newly spawned `minecraft:villager` entities receive one name from the built-in list.
+- `minecraft:villager` entities receive one name from the server-configured list in `villagefolk-server.txt` the first time they join, including villagers loaded from village chunks.
 - The selection is based on the villager's UUID, so it is stable for that villager and needs no per-world random state.
 - The custom name is saved with the villager and displayed above them.
-- Villagers loaded from disk are left alone. The mod does not rename villagers already in an existing world.
+- Per-world UUID records ensure later chunk loads and server restarts do not overwrite the name or a subsequent name-tag rename.
 - Name tags remain usable after a villager has spawned.
 
 ## 1. Scope
 
 - No new entities, items, AI or dependencies.
 - Only ordinary villagers are named; wandering traders and zombie villagers are not.
-- The name pool is language-neutral and currently ships in the Rust source.
+- The name pool ships in a separate default text file and can be overridden per world in `serverconfig/`.
+- The mod runs only on the server, including the integrated server in single-player.
 - Two villagers may receive the same name; names are selected independently.
 
 ## 2. Testing in game

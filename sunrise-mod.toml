@@ -5,7 +5,7 @@ description = "Gives villagers individual names that persist with their world."
 authors = ["EAnathos"]
 license = "PolyForm-Noncommercial-1.0.0"
 # A native mod: Rust in src/, compiled by `cargo sunrise-mod build` against the game build [native] pins, beside data/ and assets/.
-side = "both"
+side = "server"
 
 [native]
 game = "26.3"

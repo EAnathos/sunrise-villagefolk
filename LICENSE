@@ -1,18 +1,9 @@
-Sunrise Creatures: licence of the code
+Villagefolk license
 
-Required Notice: Copyright (c) 2026 EAnathos (https://github.com/EAnathos/sunrise-creatures)
+Required Notice: Copyright (c) 2026 EAnathos (https://github.com/EAnathos/sunrise-villagefolk)
 
-The code, data and text of this repository (the Rust sources, the tools, the data and language files, the
-documentation) are licensed under the PolyForm Noncommercial License 1.0.0, below: you may use, change, fork and
-share them for any noncommercial purpose, keeping this licence and the Required Notice line above with every copy
-(which credits the author).
-
-The artwork is not covered by this licence: the models, the textures, the icons, the pictures and the code generated
-from the models are the author's, all rights reserved, under the terms of LICENSE-ART.md. A fork may not use them.
-The sounds are covered by neither: they are cut from CC0 recordings (LICENSE-ART.md, "Sounds").
-
-Versions of the mods released before this licence (up to the library 0.3.4 and the mods released with it, on
-2026-11-22) were released under the MIT licence; the copies of those versions keep it.
+The source code, configuration data, and documentation in this repository are licensed under the PolyForm
+Noncommercial License 1.0.0 below. The repository currently contains no separately licensed artwork or sounds.
 
 ---
 
