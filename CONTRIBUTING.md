@@ -40,7 +40,7 @@ See [README.md](README.md) for the mod's configuration and usage, and [SPECS.md]
 - Do not force-push shared branches. Rebase or merge the latest `dev` into your own topic branch as needed.
 - Promote reviewed work from `dev` to `main` with a pull request when it is ready for release.
 
-GitHub requires pull requests with at least one approval to merge into `main` or `dev`; approving reviews are dismissed when new commits are pushed, and conversations must be resolved. Force-pushes and branch deletion are disabled for contributors. Repository administrators can bypass branch protection because the Sunrise release tool pushes version commits directly to `main`; reserve that bypass for the documented release process.
+GitHub requires pull requests with at least one approval to merge into `main` or `dev`; approving reviews are dismissed when new commits are pushed, and conversations must be resolved. Force-pushes and branch deletion are disabled for contributors. Repository administrators can bypass branch protection. This exception is needed for the Sunrise release tool's direct release push to `main` and occasional administrative maintenance; ordinary changes should go through pull requests.
 
 Releases are made from a clean `main` checkout using Sunrise's release tool, for example `cargo sunrise-mod release patch`. The tool updates the version, creates a release commit and tag, and pushes them to GitHub, which starts the signed release workflow. It is not an ordinary development command; confirm the intended version and release contents before running it. Do not edit release versions or generated signing assets by hand.
 
